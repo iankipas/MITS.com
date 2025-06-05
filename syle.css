@@ -1,0 +1,113 @@
+/* Photo Interactions - Top Right Corner */
+.photo-interactions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 2;
+}
+
+.like-btn, .comment-btn {
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+  position: relative;
+}
+
+.like-btn:hover, .comment-btn:hover {
+  background: rgba(0,0,0,0.7);
+  transform: scale(1.1);
+}
+
+.like-btn.liked {
+  color: var(--primary);
+}
+
+.like-btn.liked i {
+  font-weight: 900;
+}
+
+.like-count {
+  position: absolute;
+  bottom: -8px;
+  right: -5px;
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  font-size: 10px;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+.comment-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 3;
+}
+
+.comment-section.active {
+  transform: translateY(0);
+}
+
+.comments-list {
+  max-height: 100px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.comment {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.comment-form {
+  display: flex;
+  gap: 5px;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 5px 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.comment-form button {
+  padding: 5px 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Ensure portfolio item has relative positioning */
+.portfolio-item {
+  position: relative;
+}
